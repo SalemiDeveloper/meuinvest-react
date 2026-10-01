@@ -7,9 +7,6 @@ import {
 } from '../../services/investments';
 
 import type { InvestmentImportWithPositions } from '../../types/investments';
-
-import { formatDate } from '../../utils/date';
-
 import './Reports.css';
 
 function formatReferencePeriod(value: string): string {

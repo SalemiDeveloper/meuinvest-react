@@ -10,8 +10,6 @@ import type {
 } from '../../types/investments';
 
 import { formatCurrency } from '../../utils/currency';
-import { formatDate } from '../../utils/date';
-
 import './MonthlyAnalysis.css';
 
 type ComparisonPosition = {

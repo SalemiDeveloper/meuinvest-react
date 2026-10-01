@@ -1,9 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { useAuth } from '../../contexts/useAuth';
-import { supabase } from '../../lib/supabase';
-
 import { getLatestInvestmentImport } from '../../services/investments';
 
 import type { InvestmentImportWithPositions } from '../../types/investments';
@@ -15,7 +12,6 @@ import './Dashboard.css';
 
 function Dashboard() {
     const navigate = useNavigate();
-    const { user } = useAuth();
 
     const [latestImport, setLatestImport] =
         useState<InvestmentImportWithPositions | null>(null);
@@ -72,12 +68,6 @@ function Dashboard() {
 
         return institutions.size;
     }, [latestImport]);
-
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-
-        navigate('/login');
-    };
 
     if (loading) {
         return <p>Carregando dashboard...</p>;

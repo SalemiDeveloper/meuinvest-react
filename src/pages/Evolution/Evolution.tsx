@@ -166,11 +166,6 @@ function Evolution() {
             ? current.total - first.total
             : 0;
 
-    const periodGrowthPercentage =
-        first && first.total !== 0
-            ? (periodGrowth / first.total) * 100
-            : 0;
-
     if (loading) {
         return (
             <main className="evolution">
@@ -258,23 +253,27 @@ function Evolution() {
                         <article className="evolution-card">
                             <span>Maior patrimônio registrado</span>
 
-                            <strong>
-                                {formatCurrency(
-                                    highest.total,
-                                )}
-                            </strong>
+                            {highest && (
+                                <>
+                                    <strong>
+                                        {formatCurrency(
+                                            highest.total,
+                                        )}
+                                    </strong>
 
-                            <small>
-                                Variação acumulada:{' '}
-                                {formatSignedPercentage(
-                                    highest.total !== 0
-                                        ? ((highest.total -
-                                              first.total) /
-                                              first.total) *
-                                          100
-                                        : 0,
-                                )}
-                            </small>
+                                    <small>
+                                        Variação acumulada:{' '}
+                                        {formatSignedPercentage(
+                                            highest.total !== 0
+                                                ? ((highest.total -
+                                                    first.total) /
+                                                    first.total) *
+                                                100
+                                                : 0,
+                                        )}
+                                    </small>
+                                </>
+                            )}
                         </article>
                     </section>
 
