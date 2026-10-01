@@ -1,0 +1,403 @@
+.investment-analysis {
+    width: 100%;
+    padding: 24px 18px 40px;
+
+    color: var(--color-text);
+}
+
+.investment-analysis-header {
+    margin-bottom: 24px;
+}
+
+.investment-analysis-header h1 {
+    margin: 0 0 8px;
+
+    color: var(--color-text);
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.investment-analysis-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 14px;
+}
+
+/* Seleção */
+
+.investment-analysis-selector {
+    width: 520px;
+    max-width: 100%;
+
+    margin-bottom: 22px;
+}
+
+.investment-analysis-selector label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 13px;
+}
+
+.investment-analysis-selector select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+
+    background: var(--color-input-background);
+    color: var(--color-text);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+}
+
+.investment-analysis-selector select:focus {
+    border-color: var(--color-border-light);
+}
+
+/* Cabeçalho das seções */
+
+.investment-analysis-section-header {
+    margin-bottom: 13px;
+}
+
+.investment-analysis-section-header h2 {
+    margin: 0 0 6px;
+
+    color: var(--color-text);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.investment-analysis-section-header p {
+    margin: 0;
+
+    color: var(--color-text-subtle);
+
+    font-size: 12px;
+}
+
+/* Informações */
+
+.investment-analysis-info {
+    width: 680px;
+    max-width: 100%;
+
+    margin-bottom: 22px;
+    padding: 20px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.investment-analysis-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 30px;
+}
+
+.investment-analysis-info-grid div {
+    min-width: 0;
+}
+
+.investment-analysis-info-grid span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--color-text-subtle);
+
+    font-size: 11px;
+}
+
+.investment-analysis-info-grid strong {
+    display: block;
+
+    color: var(--color-text-secondary);
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+/* Cards */
+
+.investment-analysis-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.investment-analysis-card {
+    min-height: 92px;
+
+    padding: 17px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.investment-analysis-card span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--color-text-muted);
+
+    font-size: 11px;
+}
+
+.investment-analysis-card strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--color-text);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.investment-analysis-card strong.positive {
+    color: var(--color-positive);
+}
+
+.investment-analysis-card strong.negative {
+    color: var(--color-negative);
+}
+
+.investment-analysis-card small {
+    display: block;
+
+    color: var(--color-text-subtle);
+
+    font-size: 10px;
+}
+
+.investment-analysis-card small.positive {
+    color: var(--color-positive);
+}
+
+.investment-analysis-card small.negative {
+    color: var(--color-negative);
+}
+
+/* Gráfico */
+
+.investment-analysis-chart-section {
+    margin-bottom: 22px;
+
+    padding: 20px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.investment-analysis-chart {
+    width: 100%;
+    height: 280px;
+
+    margin-top: 12px;
+}
+
+.investment-analysis-chart svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+.investment-chart-grid-line {
+    stroke: var(--color-border-light);
+
+    stroke-width: 1;
+    stroke-dasharray: 3 4;
+}
+
+.investment-chart-axis-label {
+    fill: var(--color-text-muted);
+
+    font-size: 11px;
+}
+
+.investment-chart-line {
+    fill: none;
+
+    stroke: var(--color-text);
+
+    stroke-width: 2;
+}
+
+.investment-chart-point {
+    fill: var(--color-text);
+}
+
+/* Histórico */
+
+.investment-analysis-history {
+    margin-bottom: 14px;
+}
+
+.investment-analysis-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.investment-analysis-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+.investment-analysis-table thead {
+    background: var(--color-table-header);
+}
+
+.investment-analysis-table th {
+    padding: 12px 14px;
+
+    border-bottom: 1px solid var(--color-border-light);
+
+    color: var(--color-text-secondary);
+
+    text-align: left;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.investment-analysis-table th:not(:first-child),
+.investment-analysis-table td:not(:first-child) {
+    text-align: right;
+}
+
+.investment-analysis-table td {
+    padding: 12px 14px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-text-secondary);
+
+    white-space: nowrap;
+}
+
+.investment-analysis-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.investment-analysis-table tbody tr:hover {
+    background: var(--color-surface-hover);
+}
+
+.investment-analysis-table td.positive {
+    color: var(--color-positive);
+}
+
+.investment-analysis-table td.negative {
+    color: var(--color-negative);
+}
+
+/* Estados */
+
+.investment-analysis-empty {
+    padding: 36px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text-muted);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.investment-analysis-error {
+    padding: 12px;
+
+    border: 1px solid var(--color-negative);
+    border-radius: 6px;
+
+    background: var(--color-surface);
+    color: var(--color-negative);
+
+    font-size: 12px;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+    .investment-analysis-info {
+        width: 100%;
+    }
+
+    .investment-analysis-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .investment-analysis {
+        padding: 20px 14px 30px;
+    }
+
+    .investment-analysis-header h1 {
+        font-size: 24px;
+    }
+
+    .investment-analysis-header p {
+        font-size: 13px;
+    }
+
+    .investment-analysis-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .investment-analysis-chart-section {
+        padding: 16px;
+    }
+
+    .investment-analysis-chart {
+        height: 250px;
+    }
+}
+
+@media (max-width: 450px) {
+    .investment-analysis-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

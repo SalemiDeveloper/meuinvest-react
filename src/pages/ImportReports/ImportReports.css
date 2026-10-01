@@ -1,0 +1,322 @@
+.import-reports {
+    width: 100%;
+    padding: 24px 18px 40px;
+    color: var(--color-text);
+}
+
+.import-reports-header {
+    margin-bottom: 24px;
+}
+
+.import-reports-header h1 {
+    margin: 0 0 8px;
+    color: var(--color-text);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.import-reports-header p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.import-reports-card {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    background: var(--color-surface);
+}
+
+.import-reports-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.import-reports-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--color-surface-active);
+    color: var(--color-text-secondary);
+}
+
+.import-reports-card-header h2 {
+    margin: 0 0 5px;
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.import-reports-card-header p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.import-reports-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 145px;
+    padding: 24px;
+    border: 1px dashed var(--color-border-light);
+    border-radius: 9px;
+    background: var(--color-input-background);
+    color: var(--color-text);
+    font-family: inherit;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.import-reports-dropzone:hover {
+    border-color: var(--color-text-subtle);
+    background: var(--color-surface-hover);
+}
+
+.import-reports-dropzone:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.import-reports-upload-icon {
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+}
+
+.import-reports-dropzone strong {
+    margin-bottom: 5px;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.import-reports-dropzone span {
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.import-reports-selected {
+    margin-top: 18px;
+    padding: 16px;
+    border-radius: 9px;
+    background: var(--color-background);
+}
+
+.import-reports-selected-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.import-reports-selected-header h2 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.import-reports-selected-header button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-muted);
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.import-reports-selected-header button:hover {
+    color: var(--color-text);
+}
+
+.import-reports-selected-header button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.import-reports-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.import-reports-file {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 62px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-surface);
+}
+
+.import-reports-file-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: var(--color-surface-active);
+    color: var(--color-text-secondary);
+}
+
+.import-reports-file-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+}
+
+.import-reports-file-info strong {
+    overflow: hidden;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.import-reports-file-info span {
+    margin-top: 3px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+}
+
+.import-reports-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.import-reports-remove:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text);
+}
+
+.import-reports-remove:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.import-reports-message {
+    margin-top: 14px;
+    padding: 11px 13px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.import-reports-message-error {
+    border: 1px solid var(--color-negative);
+    background: var(--color-surface);
+    color: var(--color-negative);
+}
+
+.import-reports-message-success {
+    border: 1px solid var(--color-positive);
+    background: var(--color-surface);
+    color: var(--color-positive);
+}
+
+.import-reports-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.import-reports-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.import-reports-button:hover {
+    opacity: 0.88;
+}
+
+.import-reports-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+@media (max-width: 650px) {
+    .import-reports {
+        padding: 20px 14px 30px;
+    }
+
+    .import-reports-header h1 {
+        font-size: 24px;
+    }
+
+    .import-reports-header p {
+        font-size: 13px;
+    }
+
+    .import-reports-card {
+        padding: 16px;
+    }
+
+    .import-reports-dropzone {
+        min-height: 135px;
+    }
+
+    .import-reports-selected {
+        padding: 12px;
+    }
+
+    .import-reports-selected-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .import-reports-footer {
+        justify-content: stretch;
+    }
+
+    .import-reports-button {
+        width: 100%;
+    }
+}

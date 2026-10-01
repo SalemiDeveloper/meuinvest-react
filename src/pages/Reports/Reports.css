@@ -1,0 +1,176 @@
+.reports {
+    width: 100%;
+    padding: 24px 18px 40px;
+
+    color: var(--color-text);
+}
+
+.reports-header {
+    margin-bottom: 24px;
+}
+
+.reports-header h1 {
+    margin: 0 0 8px;
+
+    color: var(--color-text);
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.reports-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 14px;
+}
+
+/* Tabela */
+
+.reports-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.reports-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+.reports-table thead {
+    background: var(--color-table-header);
+}
+
+.reports-table th {
+    padding: 13px 14px;
+
+    border-bottom: 1px solid var(--color-border-light);
+
+    color: var(--color-text-secondary);
+
+    text-align: left;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.reports-table th:last-child,
+.reports-table td:last-child {
+    text-align: right;
+}
+
+.reports-table td {
+    padding: 14px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-text-secondary);
+
+    white-space: nowrap;
+}
+
+.reports-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.reports-table tbody tr:hover {
+    background: var(--color-surface-hover);
+}
+
+.reports-table td:nth-child(3) {
+    text-align: left;
+}
+
+/* Exclusão */
+
+.reports-delete-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+    color: var(--color-negative);
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.reports-delete-button:hover {
+    opacity: 0.8;
+}
+
+.reports-delete-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Estados */
+
+.reports-empty {
+    padding: 36px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text-muted);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.reports-error {
+    margin: 0 0 14px;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--color-negative);
+    border-radius: 6px;
+
+    background: var(--color-surface);
+    color: var(--color-negative);
+
+    font-size: 12px;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+    .reports {
+        padding: 20px 14px 30px;
+    }
+
+    .reports-header h1 {
+        font-size: 24px;
+    }
+
+    .reports-header p {
+        font-size: 13px;
+    }
+
+    .reports-table {
+        min-width: 700px;
+    }
+}

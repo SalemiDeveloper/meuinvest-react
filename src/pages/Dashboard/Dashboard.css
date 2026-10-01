@@ -1,0 +1,247 @@
+.dashboard {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 18px 40px;
+    color: var(--color-text);
+}
+
+.dashboard-header {
+    margin-bottom: 34px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 9px;
+
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.dashboard-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.dashboard-section {
+    margin-bottom: 34px;
+}
+
+.dashboard-section-header {
+    margin-bottom: 14px;
+}
+
+.dashboard-section-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 18px;
+}
+
+.dashboard-section-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.dashboard-card {
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 18px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.dashboard-card-label {
+    margin-bottom: 9px;
+
+    color: var(--color-text-muted);
+    font-size: 12px;
+}
+
+.dashboard-card-value {
+    color: var(--color-text);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.dashboard-action {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 18px 20px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.dashboard-action-content h2 {
+    margin: 0 0 8px;
+
+    font-size: 16px;
+}
+
+.dashboard-action-content p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+    font-size: 13px;
+}
+
+.dashboard-action-buttons {
+    display: flex;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.dashboard-button {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border: 1px solid var(--color-border-light);
+    border-radius: 7px;
+
+    background: transparent;
+    color: var(--color-text);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.dashboard-button:hover {
+    background: var(--color-surface-hover);
+}
+
+.dashboard-button-primary {
+    border-color: var(--color-button-background);
+
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+}
+
+.dashboard-button-primary:hover {
+    opacity: 0.88;
+}
+
+.dashboard-table-wrapper {
+    overflow-x: auto;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.dashboard-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+.dashboard-table th {
+    padding: 13px 14px;
+
+    background: var(--color-table-header);
+
+    color: var(--color-text-secondary);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+}
+
+.dashboard-table td {
+    padding: 13px 14px;
+
+    border-top: 1px solid var(--color-border);
+
+    color: var(--color-text-secondary);
+}
+
+.dashboard-table th:last-child,
+.dashboard-table td:last-child {
+    text-align: right;
+}
+
+.dashboard-investment-name {
+    color: var(--color-text);
+
+    font-weight: 600;
+}
+
+.dashboard-investment-code {
+    margin-top: 4px;
+
+    color: var(--color-text-subtle);
+
+    font-size: 11px;
+}
+
+.dashboard-empty {
+    padding: 32px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    color: var(--color-text-muted);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.dashboard-logout {
+    margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-action {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-action-buttons {
+        width: 100%;
+    }
+
+    .dashboard-button {
+        flex: 1;
+    }
+}

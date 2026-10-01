@@ -1,0 +1,309 @@
+.evolution {
+    width: 100%;
+    padding: 24px 18px 40px;
+
+    color: var(--color-text);
+}
+
+.evolution-header {
+    margin-bottom: 26px;
+}
+
+.evolution-header h1 {
+    margin: 0 0 8px;
+
+    color: var(--color-text);
+
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.evolution-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 14px;
+}
+
+/* Cards */
+
+.evolution-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+
+    margin-bottom: 26px;
+}
+
+.evolution-card {
+    min-height: 105px;
+
+    padding: 18px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.evolution-card span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--color-text-muted);
+
+    font-size: 12px;
+}
+
+.evolution-card strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--color-text);
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.evolution-card strong.positive {
+    color: var(--color-positive);
+}
+
+.evolution-card strong.negative {
+    color: var(--color-negative);
+}
+
+.evolution-card small {
+    display: block;
+
+    color: var(--color-text-subtle);
+
+    font-size: 11px;
+}
+
+/* Cabeçalho das seções */
+
+.evolution-section-header {
+    margin-bottom: 13px;
+}
+
+.evolution-section-header h2 {
+    margin: 0 0 6px;
+
+    color: var(--color-text);
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.evolution-section-header p {
+    margin: 0;
+
+    color: var(--color-text-subtle);
+
+    font-size: 12px;
+}
+
+/* Gráfico */
+
+.evolution-chart-section {
+    margin-bottom: 26px;
+
+    padding: 22px 22px 20px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.evolution-chart {
+    width: 100%;
+    height: 300px;
+
+    margin-top: 14px;
+}
+
+.evolution-chart svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+.chart-grid-line {
+    stroke: var(--color-border-light);
+
+    stroke-width: 1;
+    stroke-dasharray: 3 4;
+}
+
+.chart-axis-label {
+    fill: var(--color-text-muted);
+
+    font-size: 11px;
+}
+
+.chart-line {
+    fill: none;
+
+    stroke: var(--color-text);
+
+    stroke-width: 2;
+}
+
+.chart-point {
+    fill: var(--color-text);
+}
+
+/* Histórico */
+
+.evolution-detail {
+    margin-bottom: 14px;
+}
+
+.evolution-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+}
+
+.evolution-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+.evolution-table thead {
+    background: var(--color-table-header);
+}
+
+.evolution-table th {
+    padding: 12px 14px;
+
+    border-bottom: 1px solid var(--color-border-light);
+
+    color: var(--color-text-secondary);
+
+    text-align: left;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.evolution-table th:not(:first-child),
+.evolution-table td:not(:first-child) {
+    text-align: right;
+}
+
+.evolution-table td {
+    padding: 12px 14px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-text-secondary);
+
+    white-space: nowrap;
+}
+
+.evolution-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.evolution-table tbody tr:hover {
+    background: var(--color-surface-hover);
+}
+
+.evolution-table td.positive {
+    color: var(--color-positive);
+}
+
+.evolution-table td.negative {
+    color: var(--color-negative);
+}
+
+/* Rodapé */
+
+.evolution-footer {
+    margin: 16px 0 0;
+
+    color: var(--color-text-subtle);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* Estados */
+
+.evolution-empty {
+    padding: 36px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    background: var(--color-surface);
+
+    color: var(--color-text-muted);
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.evolution-error {
+    padding: 12px;
+
+    border: 1px solid var(--color-negative);
+    border-radius: 6px;
+
+    background: var(--color-surface);
+
+    color: var(--color-negative);
+
+    font-size: 12px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+    .evolution-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .evolution {
+        padding: 20px 14px 30px;
+    }
+
+    .evolution-header h1 {
+        font-size: 24px;
+    }
+
+    .evolution-header p {
+        font-size: 13px;
+    }
+
+    .evolution-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .evolution-chart-section {
+        padding: 16px;
+    }
+
+    .evolution-chart {
+        height: 260px;
+    }
+}

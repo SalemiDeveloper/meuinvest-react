@@ -1,0 +1,417 @@
+.settings {
+    width: 100%;
+    min-height: calc(100vh - 45px);
+
+    padding: 27px 18px 40px;
+
+    color: var(--color-text);
+}
+
+.settings-header {
+    margin-bottom: 35px;
+}
+
+.settings-header h1 {
+    margin: 0 0 6px;
+
+    color: var(--color-text);
+
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.settings-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 13px;
+}
+
+/* Layout */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 225px minmax(0, 1fr);
+    gap: 55px;
+
+    max-width: 980px;
+}
+
+/* Menu lateral */
+
+.settings-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.settings-sidebar button {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 39px;
+
+    padding: 0 13px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+    color: var(--color-text-secondary);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.settings-sidebar button:hover {
+    background: var(--color-surface-hover);
+}
+
+.settings-sidebar button.active {
+    background: var(--color-surface-active);
+    color: var(--color-text);
+}
+
+/* Conteúdo */
+
+.settings-content {
+    width: 100%;
+    max-width: 680px;
+}
+
+.settings-section-header {
+    margin-bottom: 25px;
+}
+
+.settings-section-header h2 {
+    margin: 0 0 7px;
+
+    color: var(--color-text);
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.settings-section-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 13px;
+}
+
+/* Formulários */
+
+.settings-form,
+.settings-security-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings-field label {
+    color: var(--color-text-secondary);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.settings-field input {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+
+    outline: none;
+
+    background: var(--color-input-background);
+    color: var(--color-text);
+
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.settings-field input:focus {
+    border-color: var(--color-border-light);
+}
+
+.settings-field input:disabled {
+    opacity: 0.6;
+}
+
+/* Senhas */
+
+.settings-password-input {
+    position: relative;
+}
+
+.settings-password-input input {
+    padding-right: 45px;
+}
+
+.settings-password-input button {
+    position: absolute;
+
+    top: 50%;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    transform: translateY(-50%);
+
+    border: 0;
+
+    background: transparent;
+    color: var(--color-text-subtle);
+
+    cursor: pointer;
+}
+
+.settings-password-input button:hover {
+    color: var(--color-text-secondary);
+}
+
+/* Botão principal */
+
+.settings-primary-button {
+    align-self: flex-start;
+
+    min-width: 85px;
+    height: 42px;
+
+    padding: 0 17px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: var(--color-button-background);
+    color: var(--color-button-text);
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.settings-primary-button:hover {
+    opacity: 0.88;
+}
+
+.settings-primary-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Mensagens */
+
+.settings-error {
+    margin: -8px 0 0;
+
+    color: var(--color-negative);
+
+    font-size: 11px;
+}
+
+.settings-success {
+    margin: -8px 0 0;
+
+    color: var(--color-positive);
+
+    font-size: 11px;
+}
+
+/* Excluir conta */
+
+.settings-danger-section {
+    margin-top: 58px;
+}
+
+.settings-danger-section h2 {
+    margin: 0 0 7px;
+
+    color: var(--color-text);
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.settings-danger-section > p {
+    margin: 0 0 30px;
+
+    color: var(--color-text-muted);
+
+    font-size: 13px;
+}
+
+.settings-danger-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+
+    padding: 20px;
+
+    border: 1px solid #3e2020;
+    border-radius: 9px;
+
+    background: #1c080a;
+}
+
+.settings-danger-box strong {
+    color: #f1dddd;
+
+    font-size: 15px;
+}
+
+.settings-danger-box span {
+    color: #e2bcbc;
+
+    font-size: 13px;
+}
+
+.settings-danger-button {
+    margin-top: 13px;
+
+    height: 42px;
+
+    padding: 0 17px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: #a91f27;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.settings-danger-button:hover {
+    background: #bd252d;
+}
+
+/* Segurança */
+
+.settings-security-placeholder {
+    margin-top: 58px;
+}
+
+.settings-security-placeholder h2 {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 17px;
+}
+
+/* Tema */
+
+.settings-theme-options {
+    display: inline-flex;
+
+    padding: 4px;
+
+    border-radius: 9px;
+
+    background: var(--color-surface-active);
+}
+
+.settings-theme-options button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 40px;
+
+    padding: 0 14px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+    color: var(--color-text-muted);
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.settings-theme-options button:hover {
+    color: var(--color-text-secondary);
+}
+
+.settings-theme-options button.active {
+    background: var(--color-border-light);
+    color: var(--color-text);
+}
+
+/* Responsividade */
+
+@media (max-width: 850px) {
+    .settings-layout {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .settings {
+        padding: 20px 14px 30px;
+    }
+
+    .settings-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .settings-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .settings-sidebar button {
+        width: auto;
+        white-space: nowrap;
+    }
+
+    .settings-content {
+        max-width: none;
+    }
+
+    .settings-theme-options {
+        width: 100%;
+    }
+
+    .settings-theme-options button {
+        flex: 1;
+        justify-content: center;
+    }
+}

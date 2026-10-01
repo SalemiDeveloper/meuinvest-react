@@ -1,0 +1,368 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--color-background);
+}
+
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    padding: 16px 12px;
+    background: var(--color-sidebar);
+    z-index: 20;
+    transition: width 0.2s ease;
+}
+
+.app-sidebar-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    height: 48px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border-radius: 8px;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.app-brand-logo {
+    display: block;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.app-menu-label {
+    margin: 0 10px 9px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    white-space: nowrap;
+    transition:
+        opacity 0.15s ease,
+        visibility 0.15s ease;
+}
+
+.app-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.app-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 40px;
+    padding: 0 11px;
+    border-radius: 7px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.app-nav-link svg {
+    flex-shrink: 0;
+}
+
+.app-nav-link span {
+    overflow: hidden;
+    transition:
+        opacity 0.15s ease,
+        width 0.2s ease;
+}
+
+.app-nav-link:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text);
+}
+
+.app-nav-link.active {
+    background: var(--color-surface-active);
+    color: var(--color-text);
+}
+
+.app-sidebar-footer {
+    position: relative;
+}
+
+.app-profile-menu {
+    margin-bottom: 5px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+    background: var(--color-surface);
+}
+
+.app-profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 15px;
+    border: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-family: inherit;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.app-profile-menu-item:last-child {
+    border-bottom: 0;
+}
+
+.app-profile-menu-item:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text);
+}
+
+.app-profile-menu-item.logout {
+    color: var(--color-text-secondary);
+}
+
+.app-profile-menu-item.logout:hover {
+    color: var(--color-negative);
+}
+
+.app-profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    min-height: 58px;
+    padding: 7px 10px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--color-text);
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        padding 0.2s ease;
+}
+
+.app-profile:hover,
+.app-profile.menu-open {
+    background: var(--color-surface-active);
+}
+
+.app-profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #404040;
+    color: #f0f0f0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.app-profile-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    transition:
+        opacity 0.15s ease,
+        width 0.2s ease;
+}
+
+.app-profile-info strong {
+    overflow: hidden;
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app-profile-info span {
+    overflow: hidden;
+    margin-top: 3px;
+    color: var(--color-text-muted);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app-profile-chevron {
+    flex-shrink: 0;
+    color: var(--color-text-muted);
+    transition:
+        opacity 0.15s ease,
+        visibility 0.15s ease;
+}
+
+.app-main {
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    margin-left: 280px;
+    background: var(--color-background);
+    transition:
+        width 0.2s ease,
+        margin-left 0.2s ease;
+}
+
+.app-topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 54px;
+    padding: 0 16px;
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 10;
+}
+
+.app-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.app-menu-button:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-text);
+}
+
+.app-content {
+    min-height: calc(100vh - 54px);
+}
+
+/* Sidebar recolhida */
+
+.app-layout.sidebar-collapsed .app-sidebar {
+    width: 72px;
+}
+
+.app-layout.sidebar-collapsed .app-main {
+    width: calc(100% - 72px);
+    margin-left: 72px;
+}
+
+.app-layout.sidebar-collapsed .app-brand {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+}
+
+.app-layout.sidebar-collapsed .app-brand span {
+    display: none;
+}
+
+.app-layout.sidebar-collapsed .app-menu-label {
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.app-layout.sidebar-collapsed .app-nav-link {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+}
+
+.app-layout.sidebar-collapsed .app-nav-link span {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.app-layout.sidebar-collapsed .app-profile {
+    justify-content: center;
+    gap: 0;
+    padding: 7px 0;
+}
+
+.app-layout.sidebar-collapsed .app-profile-info {
+    width: 0;
+    flex: 0 0 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.app-layout.sidebar-collapsed .app-profile-chevron {
+    display: none;
+}
+
+/* Menu de perfil na sidebar recolhida */
+
+.app-layout.sidebar-collapsed .app-profile-menu {
+    position: absolute;
+    left: calc(100% + 8px);
+    bottom: 0;
+    width: 190px;
+    z-index: 30;
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+    .app-sidebar {
+        width: 240px;
+    }
+
+    .app-main {
+        width: calc(100% - 240px);
+        margin-left: 240px;
+    }
+
+    .app-nav-link {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .app-sidebar {
+        width: 210px;
+    }
+
+    .app-main {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+    }
+
+    .app-nav-link {
+        font-size: 12px;
+    }
+}
