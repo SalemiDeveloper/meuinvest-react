@@ -1,6 +1,9 @@
 import { useState, type FormEvent } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { 
+    Link, 
+    useNavigate 
+} from 'react-router-dom';
 
 import { supabase } from '../../lib/supabase';
 
@@ -67,11 +70,13 @@ function Login() {
         <main className="login-page">
             <section className="login-container">
                 <div className="login-logo">
-                    <img
+                    <Link to="/" className="login-logo" aria-label="Voltar para o início">
+                        <img
                             src="/logo_ofc.png"
                             alt="MeuInvest"
                             className="app-brand-logo"
                         />
+                    </Link>
                 </div>
 
                 <header className="login-header">
@@ -113,9 +118,9 @@ function Login() {
                                 Senha
                             </label>
 
-                            <Link to="/recuperar-senha">
+                            {/* <Link to="/recuperar-senha">
                                 Esqueceu sua senha?
-                            </Link>
+                            </Link> */}
                         </div>
 
                         <div className="login-password-input">
@@ -193,10 +198,14 @@ function Login() {
                 </form>
 
                 <p className="login-register">
-                    Ainda não possui uma conta?{' '}
-                    <Link to="/register">
-                        Criar conta
-                    </Link>
+                    Quer criar uma conta?{' '}
+                    <a
+                        href="https://www.linkedin.com/in/pedro-salemi-911604269/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Entre em contato comigo
+                    </a>
                 </p>
             </section>
         </main>

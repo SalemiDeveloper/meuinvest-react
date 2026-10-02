@@ -18,12 +18,20 @@
 /* Logo */
 
 .login-logo {
-    position: relative;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 46px;
     height: 46px;
-
     margin: 0 auto 14px;
+    text-decoration: none;
+}
+
+.login-logo img {
+    display: block;
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
 }
 
 .login-logo-m {
