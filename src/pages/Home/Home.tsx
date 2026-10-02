@@ -72,7 +72,7 @@ function Home() {
                     </span>
 
                     <h1>
-                        Seus investimentos,
+                        Seus investimentos 
                         <br />
                         <span>
                             organizados em um só lugar.

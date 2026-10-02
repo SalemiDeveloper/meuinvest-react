@@ -6,7 +6,8 @@ import {
 
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
-import Register from './pages/Register/Register';
+// import Register from './pages/Register/Register';
+// import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 
 import Dashboard from './pages/Dashboard/Dashboard';
 import ImportReports from './pages/ImportReports/ImportReports';
@@ -35,10 +36,15 @@ function App() {
                     element={<Login />}
                 />
 
-                <Route
+                {/* <Route
                     path="/register"
                     element={<Register />}
-                />
+                /> */}
+
+                {/* <Route
+                    path="/recuperar-senha"
+                    element={<ForgotPassword />}
+                /> */}
 
                 <Route element={<ProtectedRoute />}>
                     <Route element={<AppLayout />}>

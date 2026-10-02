@@ -67,15 +67,11 @@ function Login() {
         <main className="login-page">
             <section className="login-container">
                 <div className="login-logo">
-                    <span className="login-logo-m">
-                        M
-                    </span>
-
-                    <span className="login-logo-bars">
-                        <i />
-                        <i />
-                        <i />
-                    </span>
+                    <img
+                            src="/logo_ofc.png"
+                            alt="MeuInvest"
+                            className="app-brand-logo"
+                        />
                 </div>
 
                 <header className="login-header">
