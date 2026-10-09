@@ -353,7 +353,7 @@ O projeto pode continuar evoluindo com novas funcionalidades, como:
 Desenvolvedor Full Stack com foco em desenvolvimento web, PHP, Laravel, React, TypeScript e bancos de dados.
 
 - GitHub: [SalemiDeveloper](https://github.com/SalemiDeveloper)
-- LinkedIn: adicione aqui seu perfil
+- LinkedIn: [Pedro Salemi] (https://www.linkedin.com/in/pedro-salemi-911604269/)
 
 ---
 
