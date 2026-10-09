@@ -369,7 +369,7 @@ function MonthlyAnalysis() {
 
                 <p>
                     Compare a evolução dos seus investimentos
-                    entre dois relatórios mensais consecutivos.
+                    entre dois relatórios mensais **<strong>CONSECUTIVOS</strong>**.
                 </p>
             </header>
 
@@ -498,7 +498,15 @@ function MonthlyAnalysis() {
                                 <article className="monthly-analysis-card">
                                     <span>Variação</span>
 
-                                    <strong className="positive">
+                                    <strong
+                                        className={
+                                            comparison.totalVariation > 0
+                                                ? 'positive'
+                                                : comparison.totalVariation < 0
+                                                ? 'negative'
+                                                : ''
+                                        }
+                                    >
                                         {comparison.totalVariation >=
                                         0
                                             ? '+'
@@ -514,7 +522,15 @@ function MonthlyAnalysis() {
                                         Variação percentual
                                     </span>
 
-                                    <strong className="positive">
+                                    <strong
+                                        className={
+                                            comparison.totalVariationPercentage > 0
+                                                ? 'positive'
+                                                : comparison.totalVariationPercentage < 0
+                                                ? 'negative'
+                                                : ''
+                                        }
+                                    >
                                         {comparison.totalVariation >=
                                         0
                                             ? '+'
@@ -573,7 +589,15 @@ function MonthlyAnalysis() {
                                 <article className="monthly-analysis-card">
                                     <span>Variação</span>
 
-                                    <strong className="positive">
+                                    <strong
+                                        className={
+                                            comparison.trackedVariation > 0
+                                                ? 'positive'
+                                                : comparison.trackedVariation < 0
+                                                ? 'negative'
+                                                : ''
+                                        }
+                                    >
                                         {comparison.trackedVariation >=
                                         0
                                             ? '+'
@@ -590,7 +614,15 @@ function MonthlyAnalysis() {
                                         acompanhada
                                     </span>
 
-                                    <strong className="positive">
+                                    <strong
+                                        className={
+                                            comparison.trackedVariationPercentage > 0
+                                                ? 'positive'
+                                                : comparison.trackedVariationPercentage < 0
+                                                ? 'negative'
+                                                : ''
+                                        }
+                                    >
                                         {comparison.trackedVariation >=
                                         0
                                             ? '+'
@@ -675,7 +707,15 @@ function MonthlyAnalysis() {
                                                         )}
                                                     </td>
 
-                                                    <td className="positive">
+                                                    <td
+                                                        className={
+                                                            position.variation > 0
+                                                                ? 'positive'
+                                                                : position.variation < 0
+                                                                ? 'negative'
+                                                                : ''
+                                                        }
+                                                    >
                                                         {position.variation >=
                                                         0
                                                             ? '+'
@@ -685,7 +725,15 @@ function MonthlyAnalysis() {
                                                         )}
                                                     </td>
 
-                                                    <td className="positive">
+                                                    <td
+                                                        className={
+                                                            position.variationPercentage > 0
+                                                                ? 'positive'
+                                                                : position.variationPercentage < 0
+                                                                ? 'negative'
+                                                                : ''
+                                                        }
+                                                    >
                                                         {position
                                                             .variationPercentage >=
                                                         0
